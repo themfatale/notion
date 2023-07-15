@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-house-turret fa-2xs"></i> Home</a>
+    <a id="health" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-heart-pulse fa-2xs"></i> Health</a>
+	  <a id="for-me" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-face-smile-hearts fa-2xs"></i> For Me</a>
+    <a id="work" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-display fa-2xs"></i> Work</a>
+    <a id="fun" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-sparkles fa-2xs"></i> Fun</a>
+    <a id="info" onclick="navigate(this.id)" href="#"> <i class="fa-thin fa-info fa-2xs"></i> Info</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "health")
+				window.open("https://health.com", '_blank').focus();
+		  else if (id == "for-me")
+				window.open("https://for-me.com", '_blank').focus();
+      else if (id == "work")
+				window.open("https://work.com", '_blank').focus();
+      else if (id == "fun")
+				window.open("https://fun.com", '_blank').focus();
+      else if (id == "info")
+				window.open("https://info.com", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
